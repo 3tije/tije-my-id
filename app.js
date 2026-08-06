@@ -7,10 +7,23 @@
     if (config.publicApps && config.publicApps[key]) link.href = config.publicApps[key];
   });
 
-  const wa = document.getElementById("whatsappLink");
-  if (wa && config.whatsapp) {
-    wa.href = `https://wa.me/${config.whatsapp}?text=${encodeURIComponent(config.whatsappMessage || "")}`;
+  const social = config.social || {};
+  const instagramLink = document.getElementById("instagramLink");
+  const facebookLink = document.getElementById("facebookLink");
+  const emailLink = document.getElementById("emailLink");
+
+  if (instagramLink && social.instagram) instagramLink.href = social.instagram;
+
+  if (facebookLink && social.facebook) {
+    facebookLink.href = social.facebook;
+    facebookLink.hidden = false;
   }
+
+  if (emailLink && social.email) {
+    emailLink.href = `mailto:${social.email}`;
+    emailLink.hidden = false;
+  }
+
 
   const menuBtn = document.querySelector(".menu-toggle");
   const nav = document.querySelector(".primary-nav");

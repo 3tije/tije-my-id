@@ -4,7 +4,18 @@ window.TIJE_CONFIG = {
     guekuat: "https://s.id/guekuat",
     abs: "https://s.id/absremajahub"
   },
-  whatsapp: "628983897000",
-  whatsappMessage: "Halo, saya menghubungi melalui TIJE Digital Hub.",
+
+  social: {
+    instagram: "https://instagram.com/tritjahyono_dharmatara",
+
+    // Isi alamat Facebook lengkap, lalu tombol Facebook otomatis tampil.
+    // Contoh: "https://facebook.com/namaakun"
+    facebook: "",
+
+    // Isi alamat email, lalu tombol Email otomatis tampil.
+    // Contoh: "nama@email.com"
+    email: ""
+  },
+
   ownerDashboardUrl: ""
 };

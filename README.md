@@ -30,9 +30,34 @@ publicApps: {
 }
 ```
 
-Nomor WhatsApp tidak ditampilkan di layar, hanya digunakan pada tombol.
+WhatsApp telah dinonaktifkan sepenuhnya.
+
+Bagian Connect hanya menggunakan Instagram, Facebook, dan Email. Isi Facebook dan Email pada `config.js`; tombol yang belum diisi otomatis disembunyikan.
 
 ## Catatan keamanan
 Landing page ini sengaja tidak menyimpan URL aplikasi privat atau PIN dalam kode publik.
 Tombol **Masuk Pemilik** baru akan aktif setelah `ownerDashboardUrl` diisi dengan halaman autentikasi aman, misalnya Supabase Auth.
 Jangan menyimpan password/PIN di `index.html`, `config.js`, atau JavaScript publik.
+
+
+## Pengaturan DNS DepoDomain untuk tije.my.id
+
+Pada jendela DNS Manager:
+
+1. Pilih tipe `A`.
+2. Kolom nama/host diisi `@` — jangan `A@`.
+3. Kolom Content diisi satu alamat IP GitHub Pages.
+4. Simpan, lalu ulangi sampai ada empat record:
+
+- `@` → `185.199.108.153`
+- `@` → `185.199.109.153`
+- `@` → `185.199.110.153`
+- `@` → `185.199.111.153`
+
+Untuk `www`, tambahkan:
+
+- Tipe: `CNAME`
+- Nama/Host: `www`
+- Content: `<username-github>.github.io`
+
+Jangan menambahkan nama repository pada nilai CNAME.
