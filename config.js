@@ -4,7 +4,7 @@ window.TIJE_CONFIG = {
     guekuat: "https://s.id/guekuat",
     abs: "https://s.id/absremajahub"
   },
-  whatsapp: "6287877883457",
+  whatsapp: "628983897000",
   whatsappMessage: "Halo, saya menghubungi melalui TIJE Digital Hub.",
   ownerDashboardUrl: ""
 };
