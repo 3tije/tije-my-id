@@ -12,6 +12,74 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .real-book-showcase{
+      position:relative;
+      min-height:470px;
+      width:100%;
+      max-width:680px;
+      margin-inline:auto;
+      perspective:1200px;
+    }
+    .real-book{
+      position:absolute;
+      display:block;
+      width:190px;
+      border-radius:10px;
+      overflow:hidden;
+      background:#fff;
+      box-shadow:0 24px 55px rgba(15,23,42,.22);
+      transition:transform .3s ease, box-shadow .3s ease, z-index .3s ease;
+    }
+    .real-book img{
+      display:block;
+      width:100%;
+      height:auto;
+      aspect-ratio: 2 / 3;
+      object-fit:cover;
+    }
+    .real-book:hover{
+      z-index:20;
+      transform:translateY(-14px) rotate(0deg) scale(1.06);
+      box-shadow:0 30px 70px rgba(15,23,42,.3);
+    }
+    .book-a{left:3%;top:60px;transform:rotate(-12deg);}
+    .book-b{left:22%;top:20px;transform:rotate(-6deg);}
+    .book-c{left:40%;top:0;z-index:6;transform:rotate(0deg);}
+    .book-d{left:58%;top:28px;z-index:4;transform:rotate(6deg);}
+    .book-e{left:75%;top:70px;z-index:2;transform:rotate(11deg);}
+    @media (max-width:900px){
+      .real-book-showcase{
+        display:grid;
+        grid-template-columns:repeat(3,minmax(0,1fr));
+        gap:14px;
+        min-height:auto;
+        max-width:620px;
+      }
+      .real-book{
+        position:relative;
+        inset:auto!important;
+        width:100%;
+        transform:none!important;
+      }
+      .real-book:hover{transform:translateY(-6px) scale(1.02)!important;}
+    }
+    @media (max-width:560px){
+      .real-book-showcase{
+        display:flex;
+        overflow-x:auto;
+        gap:14px;
+        scroll-snap-type:x mandatory;
+        padding:8px 4px 18px;
+      }
+      .real-book{
+        flex:0 0 58%;
+        scroll-snap-align:center;
+      }
+    }
+  </style>
+
 </head>
 <body>
   <a class="skip-link" href="#main">Lewati ke konten utama</a>
@@ -188,10 +256,22 @@
           <p>Buku menjadi ruang untuk menyusun pengalaman, data, refleksi, dan gagasan agar dapat terus dibaca serta memberi manfaat melampaui waktu.</p>
           <a class="btn btn-primary" data-public-app="bukutije" href="https://s.id/bukutije" target="_blank" rel="noopener">Lihat seluruh buku</a>
         </div>
-        <div class="book-stack reveal" aria-label="Pilihan buku">
-          <div class="book book-one"><small>HUMAN DEVELOPMENT</small><strong>Hadir Sepenuh Jiwa</strong><span>Tri Tjahyono</span></div>
-          <div class="book book-two"><small>TEKNOLOGI & MANUSIA</small><strong>Tetap Manusia</strong><span>Tri Tjahyono</span></div>
-          <div class="book book-three"><small>SOSIAL & GENERASI</small><strong>Anak Bersinar</strong><span>Tri Tjahyono</span></div>
+        <div class="real-book-showcase reveal" aria-label="Pilihan buku Tri Tjahyono">
+          <a class="real-book book-a" href="https://s.id/bukutije" target="_blank" rel="noopener" aria-label="Anak Bersinar, Bangsa Bercahaya">
+            <img src="assets/book-anak-bersinar.png" alt="Cover buku Anak Bersinar, Bangsa Bercahaya">
+          </a>
+          <a class="real-book book-b" href="https://s.id/bukutije" target="_blank" rel="noopener" aria-label="Aku Bukan Sembarang Remaja">
+            <img src="assets/book-abs-remaja.jpg" alt="Cover buku Aku Bukan Sembarang Remaja">
+          </a>
+          <a class="real-book book-c" href="https://s.id/bukutije" target="_blank" rel="noopener" aria-label="Hadir Sepenuh Jiwa">
+            <img src="assets/book-hadir-sepenuh-jiwa.png" alt="Cover buku Hadir Sepenuh Jiwa">
+          </a>
+          <a class="real-book book-d" href="https://s.id/bukutije" target="_blank" rel="noopener" aria-label="Penyuluh Hebat, Manusia Merdeka">
+            <img src="assets/book-penyuluh-hebat.png" alt="Cover buku Penyuluh Hebat, Manusia Merdeka">
+          </a>
+          <a class="real-book book-e" href="https://s.id/bukutije" target="_blank" rel="noopener" aria-label="Kekuatan dalam Diam">
+            <img src="assets/book-kekuatan-dalam-diam.png" alt="Cover buku Kekuatan dalam Diam">
+          </a>
         </div>
       </div>
     </section>
