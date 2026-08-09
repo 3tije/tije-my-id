@@ -1,0 +1,20 @@
+MYTIJE FIXED STRUCTURE
+
+Pastikan file berikut berada di ROOT repo:
+- index.html
+- style.css
+- config.js
+- app.js
+- content.js
+- manifest.webmanifest
+- sw.js
+
+Folder:
+- assets/img/
+- assets/icons/
+
+Jika halaman masih polos, buka:
+https://mytije.com/style.css?v=2.0.1
+
+Jika file CSS tampil sebagai teks, CSS sudah terbaca.
+Jika 404, struktur upload GitHub masih salah.
