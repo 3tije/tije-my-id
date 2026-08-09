@@ -1,362 +1,190 @@
 <!doctype html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="theme-color" content="#0f172a" />
-  <meta name="description" content="TIJE Digital Hub — Knowledge, Technology, dan Human Development." />
-  <title>TIJE Digital Hub</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="manifest" href="manifest.webmanifest" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="MyTije Digital Hub — buku, aplikasi, insight, catatan, teknologi, dan human development.">
+  <title>MyTije Digital Hub</title>
+  <link rel="icon" href="assets/icons/icon-32.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-
-  <style>
-    .real-book-showcase{
-      position:relative;
-      min-height:470px;
-      width:100%;
-      max-width:680px;
-      margin-inline:auto;
-      perspective:1200px;
-    }
-    .real-book{
-      position:absolute;
-      display:block;
-      width:190px;
-      border-radius:10px;
-      overflow:hidden;
-      background:#fff;
-      box-shadow:0 24px 55px rgba(15,23,42,.22);
-      transition:transform .3s ease, box-shadow .3s ease, z-index .3s ease;
-    }
-    .real-book img{
-      display:block;
-      width:100%;
-      height:auto;
-      aspect-ratio: 2 / 3;
-      object-fit:cover;
-    }
-    .real-book:hover{
-      z-index:20;
-      transform:translateY(-14px) rotate(0deg) scale(1.06);
-      box-shadow:0 30px 70px rgba(15,23,42,.3);
-    }
-    .book-a{left:3%;top:60px;transform:rotate(-12deg);}
-    .book-b{left:22%;top:20px;transform:rotate(-6deg);}
-    .book-c{left:40%;top:0;z-index:6;transform:rotate(0deg);}
-    .book-d{left:58%;top:28px;z-index:4;transform:rotate(6deg);}
-    .book-e{left:75%;top:70px;z-index:2;transform:rotate(11deg);}
-    @media (max-width:900px){
-      .real-book-showcase{
-        display:grid;
-        grid-template-columns:repeat(3,minmax(0,1fr));
-        gap:14px;
-        min-height:auto;
-        max-width:620px;
-      }
-      .real-book{
-        position:relative;
-        inset:auto!important;
-        width:100%;
-        transform:none!important;
-      }
-      .real-book:hover{transform:translateY(-6px) scale(1.02)!important;}
-    }
-    @media (max-width:560px){
-      .real-book-showcase{
-        display:flex;
-        overflow-x:auto;
-        gap:14px;
-        scroll-snap-type:x mandatory;
-        padding:8px 4px 18px;
-      }
-      .real-book{
-        flex:0 0 58%;
-        scroll-snap-align:center;
-      }
-    }
-  </style>
-
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Lewati ke konten utama</a>
+<a class="skip-link" href="#main">Lewati ke konten</a>
 
-  <header class="site-header" id="top">
-    <div class="container nav-wrap">
-      <a class="brand" href="#top" aria-label="TIJE Digital Hub">
-        <span class="brand-mark">T</span>
-        <span><strong>TIJE</strong><small>Digital Hub</small></span>
-      </a>
+<header class="site-header" id="top">
+  <div class="container nav-wrap">
+    <a class="brand" href="#top" aria-label="MyTije Digital Hub">
+      <img src="assets/img/mytije-logo.png" alt="Logo MyTije" class="brand-logo">
+      <span class="brand-word"><strong>MyTije</strong><small>Digital Hub</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">☰</button>
+    <nav class="primary-nav" id="primaryNav">
+      <a href="#tentang">Tentang</a>
+      <a href="#ekosistem">Ekosistem</a>
+      <a href="#buku">Buku</a>
+      <a href="#insight">Insight</a>
+      <a href="#catatan">Catatan</a>
+      <a href="#pengembangan">Human Development</a>
+      <a href="#profil">Profil</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </div>
+</header>
 
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Buka menu">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav id="primary-nav" class="primary-nav" aria-label="Navigasi utama">
-        <a href="#tentang">Tentang</a>
-        <a href="#ekosistem">Ekosistem</a>
-        <a href="#buku">Buku</a>
-        <a href="#pengembangan">Human Development</a>
-        <a href="#profil">Profil</a>
-        <a href="#kontak">Kontak</a>
-        <button class="btn btn-dark btn-small" id="ownerAccess" type="button">Masuk Pemilik</button>
-      </nav>
+<main id="main">
+  <section class="hero">
+    <div class="blob b1"></div><div class="blob b2"></div>
+    <div class="container hero-grid">
+      <div class="hero-copy reveal">
+        <span class="eyebrow">KNOWLEDGE • TECHNOLOGY • HUMAN DEVELOPMENT</span>
+        <h1>Gagasan yang tumbuh menjadi <span>karya dan manfaat.</span></h1>
+        <p class="hero-lead">Ruang digital yang menghubungkan buku, aplikasi, pembelajaran, data, insight, dan inovasi untuk mendukung pengembangan manusia.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#ekosistem">Jelajahi Ekosistem</a>
+          <a class="btn secondary" href="https://s.id/bukutije" target="_blank" rel="noopener">Lihat BukuTije</a>
+        </div>
+        <div class="trust-row">
+          <span><b>15+</b> Buku</span><span><b>8+</b> Aplikasi</span><span><b>20+</b> Program</span><span><b>24+</b> Tahun Pengalaman</span>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="portrait-card">
+          <div class="portrait-badge">MYTIJE</div>
+          <img src="assets/img/tije-ruang-kerja.png" onerror="this.src='assets/img/placeholder.svg'" alt="Tri Tjahyono di ruang kerja">
+          <div class="portrait-caption"><strong>Tri Tjahyono</strong><span>Penulis • Sosiolog • Trainer • Digital Developer</span></div>
+        </div>
+        <div class="float-card f1">📚 <b>Knowledge</b></div>
+        <div class="float-card f2">💡 <b>Innovation</b></div>
+      </div>
     </div>
-  </header>
+  </section>
 
-  <main id="main">
-    <section class="hero">
-      <div class="hero-glow hero-glow-one"></div>
-      <div class="hero-glow hero-glow-two"></div>
-      <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <span class="eyebrow">KNOWLEDGE • TECHNOLOGY • HUMAN DEVELOPMENT</span>
-          <h1>Gagasan yang tumbuh menjadi <span>karya dan manfaat.</span></h1>
-          <p class="hero-lead">Ruang digital yang menghubungkan buku, aplikasi, pembelajaran, data, dan inovasi untuk mendukung pengembangan manusia.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#ekosistem">Jelajahi Ekosistem</a>
-            <a class="btn btn-secondary" data-public-app="bukutije" href="https://s.id/bukutije" target="_blank" rel="noopener">Lihat BukuTije</a>
-          </div>
-          <div class="trust-row">
-            <span><b>15+</b> Buku</span>
-            <span><b>8+</b> Aplikasi</span>
-            <span><b>20+</b> Program</span>
-            <span><b>24+</b> Tahun Pengalaman</span>
-          </div>
-        </div>
-
-        <div class="hero-visual reveal">
-          <div class="portrait-card">
-            <div class="portrait-badge">TIJE</div>
-            <img src="assets/tije-ruang-kerja.png" alt="Tri Tjahyono di ruang kerja TIJE Digital Hub" />
-            <div class="portrait-caption">
-              <strong>Tri Tjahyono</strong>
-              <span>Penulis • Sosiolog • Trainer • Digital Developer</span>
-            </div>
-          </div>
-          <div class="floating-card fc-one"><span>📚</span><b>Knowledge</b></div>
-          <div class="floating-card fc-two"><span>💡</span><b>Innovation</b></div>
-        </div>
+  <section class="section" id="tentang">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="eyebrow">TENTANG MYTIJE</span>
+        <h2>Satu rumah untuk karya, pengetahuan, dan inovasi digital.</h2>
+        <p>MyTije menghimpun karya tulis, aplikasi, media pembelajaran, dan inisiatif pengembangan manusia dalam satu ekosistem yang rapi dan mudah dijelajahi.</p>
       </div>
-    </section>
-
-    <section class="section" id="tentang">
-      <div class="container">
-        <div class="section-heading reveal">
-          <span class="eyebrow">TENTANG TIJE</span>
-          <h2>Satu rumah untuk karya, pengetahuan, dan inovasi digital.</h2>
-          <p>TIJE Digital Hub menghimpun berbagai karya tulis, aplikasi, media pembelajaran, dan inisiatif pengembangan manusia dalam satu ekosistem yang rapi dan mudah dijelajahi.</p>
-        </div>
-        <div class="pillar-grid">
-          <article class="pillar-card reveal"><span>📚</span><h3>Knowledge</h3><p>Buku, artikel, materi, dan gagasan yang dapat dipelajari serta dikembangkan.</p></article>
-          <article class="pillar-card reveal"><span>🧭</span><h3>Human Development</h3><p>Pelatihan, refleksi, konseling, dan pembelajaran untuk pengembangan manusia.</p></article>
-          <article class="pillar-card reveal"><span>💻</span><h3>Digital Innovation</h3><p>Aplikasi dan sistem digital untuk membantu pembelajaran, pelayanan, dan pengelolaan data.</p></article>
-          <article class="pillar-card reveal"><span>🌱</span><h3>Social Impact</h3><p>Inovasi yang dirancang agar pengetahuan hadir sebagai manfaat bagi masyarakat.</p></article>
-        </div>
+      <div class="pillar-grid">
+        <article class="pillar reveal"><span>📚</span><h3>Knowledge</h3><p>Buku, artikel, materi, dan gagasan yang dapat dipelajari serta dikembangkan.</p></article>
+        <article class="pillar reveal"><span>🧭</span><h3>Human Development</h3><p>Pelatihan, refleksi, konseling, dan pembelajaran untuk pengembangan manusia.</p></article>
+        <article class="pillar reveal"><span>💻</span><h3>Digital Innovation</h3><p>Aplikasi dan sistem digital untuk membantu pembelajaran, pelayanan, dan pengelolaan data.</p></article>
+        <article class="pillar reveal"><span>🌱</span><h3>Social Impact</h3><p>Inovasi yang dirancang agar pengetahuan hadir sebagai manfaat bagi masyarakat.</p></article>
       </div>
-    </section>
-
-    <section class="section section-soft" id="ekosistem">
-      <div class="container">
-        <div class="section-heading reveal">
-          <span class="eyebrow">DIGITAL ECOSYSTEM</span>
-          <h2>Gunakan aplikasi publik. Kenali solusi internal.</h2>
-          <p>Aplikasi publik dapat langsung digunakan. Produk internal tetap diperkenalkan sebagai bagian dari portofolio, tetapi aksesnya hanya untuk pengguna berizin.</p>
-        </div>
-
-        <div class="ecosystem-label reveal">
-          <div><span class="status-dot open"></span><strong>Open Access</strong></div>
-          <small>Dapat digunakan masyarakat</small>
-        </div>
-
-        <div class="app-grid public-apps">
-          <article class="app-card featured reveal">
-            <div class="app-icon">📚</div>
-            <span class="status-badge status-open">Terbuka</span>
-            <h3>BukuTije</h3>
-            <p>Katalog buku dan karya tulis yang menghadirkan gagasan tentang manusia, pendidikan, sosial, dan perubahan.</p>
-            <a class="card-link" data-public-app="bukutije" href="https://s.id/bukutije" target="_blank" rel="noopener">Jelajahi buku <span>↗</span></a>
-          </article>
-
-          <article class="app-card reveal">
-            <div class="app-icon">💪</div>
-            <span class="status-badge status-open">Terbuka</span>
-            <h3>#GueKuat</h3>
-            <p>Ruang refleksi untuk mengenali ketahanan diri, mengelola tekanan, dan berani mencari bantuan.</p>
-            <a class="card-link" data-public-app="guekuat" href="https://s.id/guekuat" target="_blank" rel="noopener">Mulai refleksi <span>↗</span></a>
-          </article>
-
-          <article class="app-card reveal">
-            <div class="app-icon">🌟</div>
-            <span class="status-badge status-open">Terbuka</span>
-            <h3>ABS Remaja Hub</h3>
-            <p>Kumpulan kuis dan media interaktif untuk membantu remaja mengenali diri, pilihan, dan kekuatannya.</p>
-            <a class="card-link" data-public-app="abs" href="https://s.id/absremajahub" target="_blank" rel="noopener">Buka hub <span>↗</span></a>
-          </article>
-        </div>
-
-        <div class="ecosystem-label internal reveal">
-          <div><span class="status-dot locked"></span><strong>Professional Solutions</strong></div>
-          <small>Layanan profesional dan solusi digital terpilih</small>
-        </div>
-
-        <div class="app-grid internal-apps">
-          <article class="app-card reveal being-card">
-            <div class="app-icon being-logo-wrap">
-              <img src="assets/being-logo.png" alt="Logo BEING Biro Psikologi" />
-            </div>
-            <span class="status-badge status-open">Profesional</span>
-            <h3>BEING Biro Psikologi</h3>
-            <p>Layanan profesional di bidang psikologi untuk individu, kelompok, dan organisasi, termasuk konsultasi, asesmen, pelatihan, dan pengembangan manusia.</p>
-            <a class="card-link" href="https://beingpsikologi.com" target="_blank" rel="noopener">Kunjungi beingpsikologi.com <span>↗</span></a>
-          </article>
-
-          <article class="app-card reveal" data-private-title="Sanggar Mam Is">
-            <div class="app-icon">🎓</div><span class="status-badge status-private">Internal</span>
-            <h3>Sanggar Mam Is</h3><p>Sistem pembelajaran, kelas, jadwal, materi, pembayaran, dan layanan siswa.</p>
-            <button class="card-link private-trigger" type="button">Lihat informasi <span>→</span></button>
-          </article>
-          <article class="app-card reveal" data-private-title="Murojaah Tije">
-            <div class="app-icon">📖</div><span class="status-badge status-private">Internal</span>
-            <h3>Murojaah Tije</h3><p>Pendamping target hafalan, murojaah, audio ayat, dan catatan perkembangan.</p>
-            <button class="card-link private-trigger" type="button">Lihat informasi <span>→</span></button>
-          </article>
-          <article class="app-card reveal" data-private-title="e-Kinerja Penyuluh">
-            <div class="app-icon">📊</div><span class="status-badge status-private">Privat</span>
-            <h3>e-Kinerja Penyuluh</h3><p>Pencatatan kegiatan, dokumentasi, laporan, dan rekam aktivitas profesional.</p>
-            <button class="card-link private-trigger" type="button">Lihat informasi <span>→</span></button>
-          </article>
-          <article class="app-card reveal" data-private-title="Peta Rawan">
-            <div class="app-icon">🗺️</div><span class="status-badge status-private">Internal</span>
-            <h3>Peta Rawan</h3><p>Visualisasi spasial wilayah, lokasi layanan, dan informasi kerawanan berbasis data.</p>
-            <button class="card-link private-trigger" type="button">Lihat informasi <span>→</span></button>
-          </article>
-          <article class="app-card reveal" data-private-title="Apps Sehat Tije">
-            <div class="app-icon">❤️</div><span class="status-badge status-private">Privat</span>
-            <h3>Apps Sehat Tije</h3><p>Dashboard pribadi untuk obat, hasil laboratorium, tensi, berat badan, dan aktivitas fisik.</p>
-            <button class="card-link private-trigger" type="button">Lihat informasi <span>→</span></button>
-          </article>
-          <article class="app-card reveal" data-private-title="Inspiradata AI">
-            <div class="app-icon">🤖</div><span class="status-badge status-private">Internal</span>
-            <h3>Inspiradata AI</h3><p>Platform inspirasi data, tren isu, generator ide, dan pengembangan materi berbasis AI.</p>
-            <button class="card-link private-trigger" type="button">Lihat informasi <span>→</span></button>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section books-section" id="buku">
-      <div class="container books-grid">
-        <div class="books-copy reveal">
-          <span class="eyebrow">BOOKS & PUBLICATIONS</span>
-          <h2>Merawat pengalaman dan pengetahuan melalui buku.</h2>
-          <p>Buku menjadi ruang untuk menyusun pengalaman, data, refleksi, dan gagasan agar dapat terus dibaca serta memberi manfaat melampaui waktu.</p>
-          <a class="btn btn-primary" data-public-app="bukutije" href="https://s.id/bukutije" target="_blank" rel="noopener">Lihat seluruh buku</a>
-        </div>
-        <div class="real-book-showcase reveal" aria-label="Pilihan buku Tri Tjahyono">
-          <a class="real-book book-a" href="https://s.id/bukutije" target="_blank" rel="noopener" aria-label="Anak Bersinar, Bangsa Bercahaya">
-            <img src="assets/book-anak-bersinar.png" alt="Cover buku Anak Bersinar, Bangsa Bercahaya">
-          </a>
-          <a class="real-book book-b" href="https://s.id/bukutije" target="_blank" rel="noopener" aria-label="Aku Bukan Sembarang Remaja">
-            <img src="assets/book-abs-remaja.jpg" alt="Cover buku Aku Bukan Sembarang Remaja">
-          </a>
-          <a class="real-book book-c" href="https://s.id/bukutije" target="_blank" rel="noopener" aria-label="Hadir Sepenuh Jiwa">
-            <img src="assets/book-hadir-sepenuh-jiwa.png" alt="Cover buku Hadir Sepenuh Jiwa">
-          </a>
-          <a class="real-book book-d" href="https://s.id/bukutije" target="_blank" rel="noopener" aria-label="Penyuluh Hebat, Manusia Merdeka">
-            <img src="assets/book-penyuluh-hebat.png" alt="Cover buku Penyuluh Hebat, Manusia Merdeka">
-          </a>
-          <a class="real-book book-e" href="https://s.id/bukutije" target="_blank" rel="noopener" aria-label="Kekuatan dalam Diam">
-            <img src="assets/book-kekuatan-dalam-diam.png" alt="Cover buku Kekuatan dalam Diam">
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-dark" id="pengembangan">
-      <div class="container">
-        <div class="section-heading light reveal">
-          <span class="eyebrow">HUMAN DEVELOPMENT</span>
-          <h2>Teknologi membantu proses. Manusia tetap menjadi pusat.</h2>
-          <p>Program dirancang untuk memperkuat pengetahuan, kesadaran, keterampilan, dan kemampuan bertindak dalam kehidupan nyata.</p>
-        </div>
-        <div class="service-grid">
-          <article class="service-card reveal"><span>01</span><h3>Training & Workshop</h3><p>Pelatihan interaktif untuk organisasi, komunitas, sekolah, dan lingkungan kerja.</p></article>
-          <article class="service-card reveal"><span>02</span><h3>Learning Series</h3><p>Rangkaian pembelajaran tematik yang sistematis, relevan, dan dapat diterapkan.</p></article>
-          <article class="service-card reveal"><span>03</span><h3>Counseling</h3><p>Pendampingan yang menghargai martabat, pilihan, dan proses pertumbuhan individu.</p></article>
-          <article class="service-card reveal"><span>04</span><h3>Community Development</h3><p>Penguatan kapasitas masyarakat melalui partisipasi, kolaborasi, dan inovasi sosial.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="quote-section">
-      <div class="container reveal">
-        <blockquote>“Pengetahuan menjadi lebih bermakna ketika diubah menjadi karya, dan karya menjadi lebih bernilai ketika memberi manfaat bagi sesama.”</blockquote>
-        <cite>— Tri Tjahyono</cite>
-      </div>
-    </section>
-
-    <section class="section" id="profil">
-      <div class="container profile-grid">
-        <div class="profile-image reveal"><img src="assets/tije-seminar.png" alt="Tri Tjahyono saat memberikan materi seminar" /></div>
-        <div class="profile-copy reveal">
-          <span class="eyebrow">ABOUT THE CREATOR</span>
-          <h2>Tri Tjahyono</h2>
-          <p class="profile-role">Sosiolog • Penulis • Trainer • Konselor • Digital Developer</p>
-          <p>Berpengalaman dalam pengembangan manusia, edukasi sosial, pelatihan, konseling, penulisan, serta pengembangan berbagai aplikasi digital yang mendukung pembelajaran dan pelayanan.</p>
-          <p>Melalui TIJE Digital Hub, karya-karya tersebut dihimpun dalam satu rumah digital yang terus tumbuh dan dapat memberi manfaat lebih luas.</p>
-          <div class="profile-actions">
-            <a class="btn btn-primary" href="https://s.id/tritjahyono" target="_blank" rel="noopener">Lihat profil lengkap</a>
-            <a class="btn btn-secondary" href="#kontak">Hubungi</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section contact-section" id="kontak">
-      <div class="container contact-card reveal">
-        <div>
-          <span class="eyebrow">LET'S CONNECT</span>
-          <h2>Mari bertukar gagasan dan membangun manfaat.</h2>
-          <p>Untuk kolaborasi, pelatihan, karya tulis, atau pengembangan inovasi digital.</p>
-        </div>
-        <div class="contact-links">
-          <a id="instagramLink" href="https://instagram.com/tritjahyono_dharmatara" target="_blank" rel="noopener">Instagram <span>↗</span></a>
-          <a id="facebookLink" href="#" target="_blank" rel="noopener" hidden>Facebook <span>↗</span></a>
-          <a id="emailLink" href="#" hidden>Email <span>↗</span></a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="brand footer-brand"><span class="brand-mark">T</span><span><strong>TIJE</strong><small>Digital Hub</small></span></div>
-      <p>Knowledge • Technology • Human Development</p>
-      <p>© <span id="year"></span> TIJE Digital Hub</p>
     </div>
-  </footer>
+  </section>
 
-  <dialog class="access-dialog" id="privateDialog">
-    <button class="dialog-close" type="button" aria-label="Tutup">×</button>
-    <div class="dialog-icon">🔒</div>
-    <h3 id="dialogTitle">Akses terbatas</h3>
-    <p>Aplikasi ini merupakan bagian dari TIJE Digital Hub dan hanya dapat diakses oleh pemilik atau pengguna yang memperoleh izin.</p>
-    <button class="btn btn-dark dialog-ok" type="button">Mengerti</button>
-  </dialog>
+  <section class="section soft" id="ekosistem">
+    <div class="container">
+      <div class="section-heading reveal"><span class="eyebrow">DIGITAL ECOSYSTEM</span><h2>Gunakan aplikasi publik. Kenali solusi profesional.</h2><p>Aplikasi publik dapat langsung digunakan. Produk internal tetap diperkenalkan sebagai bagian dari portofolio tanpa membuka akses pengelolaannya.</p></div>
+      <div class="ecosystem-title"><div><span class="dot green"></span><strong>Open Access</strong></div><small>Dapat digunakan masyarakat</small></div>
+      <div class="app-grid">
+        <article class="app-card featured reveal"><div class="app-icon">📚</div><span class="badge open">Terbuka</span><h3>BukuTije</h3><p>Katalog buku dan karya tulis tentang manusia, pendidikan, sosial, dan perubahan.</p><a href="https://s.id/bukutije" target="_blank" rel="noopener">Jelajahi buku ↗</a></article>
+        <article class="app-card reveal"><div class="app-icon">💪</div><span class="badge open">Terbuka</span><h3>#GueKuat</h3><p>Ruang refleksi untuk mengenali ketahanan diri, mengelola tekanan, dan berani mencari bantuan.</p><a href="https://s.id/guekuat" target="_blank" rel="noopener">Mulai refleksi ↗</a></article>
+        <article class="app-card reveal"><div class="app-icon">🌟</div><span class="badge open">Terbuka</span><h3>ABS Remaja Hub</h3><p>Kumpulan kuis dan media interaktif untuk membantu remaja mengenali diri dan kekuatannya.</p><a href="https://s.id/absremajahub" target="_blank" rel="noopener">Buka hub ↗</a></article>
+      </div>
 
-  <dialog class="access-dialog" id="ownerDialog">
-    <button class="dialog-close" type="button" aria-label="Tutup">×</button>
-    <div class="dialog-icon">🛡️</div>
-    <h3>Dashboard Pemilik</h3>
-    <p>Dashboard aman akan diaktifkan pada tahap integrasi autentikasi. Tautan aplikasi privat tidak disimpan pada halaman publik ini.</p>
-    <button class="btn btn-dark dialog-ok" type="button">Mengerti</button>
-  </dialog>
+      <div class="ecosystem-title internal"><div><span class="dot blue"></span><strong>Professional Solutions</strong></div><small>Layanan profesional dan solusi digital terpilih</small></div>
+      <div class="app-grid">
+        <article class="app-card reveal"><div class="app-icon logo-box"><img src="assets/img/being-logo.png" onerror="this.style.display='none'" alt="Being"></div><span class="badge professional">Profesional</span><h3>BEING Biro Psikologi</h3><p>Layanan psikologi, konsultasi, asesmen, pelatihan, dan pengembangan manusia.</p><a href="https://beingpsikologi.com" target="_blank" rel="noopener">Kunjungi beingpsikologi.com ↗</a></article>
+        <article class="app-card reveal"><div class="app-icon">🎓</div><span class="badge internal-b">Internal</span><h3>Sanggar Mam Is</h3><p>Sistem pembelajaran, kelas, jadwal, materi, pembayaran, dan layanan siswa.</p><button class="private-btn" data-private="Sanggar Mam Is">Lihat informasi →</button></article>
+        <article class="app-card reveal"><div class="app-icon">📖</div><span class="badge internal-b">Internal</span><h3>Murojaah Tije</h3><p>Pendamping target hafalan, murojaah, audio ayat, dan catatan perkembangan.</p><button class="private-btn" data-private="Murojaah Tije">Lihat informasi →</button></article>
+        <article class="app-card reveal"><div class="app-icon">📊</div><span class="badge internal-b">Privat</span><h3>e-Kinerja Penyuluh</h3><p>Pencatatan kegiatan, dokumentasi, laporan, dan rekam aktivitas profesional.</p><button class="private-btn" data-private="e-Kinerja Penyuluh">Lihat informasi →</button></article>
+        <article class="app-card reveal"><div class="app-icon">🗺️</div><span class="badge internal-b">Internal</span><h3>Peta Rawan</h3><p>Visualisasi spasial wilayah, lokasi layanan, dan informasi kerawanan berbasis data.</p><button class="private-btn" data-private="Peta Rawan">Lihat informasi →</button></article>
+        <article class="app-card reveal"><div class="app-icon">❤️</div><span class="badge internal-b">Privat</span><h3>Apps Sehat Tije</h3><p>Dashboard pribadi untuk obat, hasil laboratorium, tensi, berat badan, dan aktivitas fisik.</p><button class="private-btn" data-private="Apps Sehat Tije">Lihat informasi →</button></article>
+        <article class="app-card reveal"><div class="app-icon">🤖</div><span class="badge internal-b">Internal</span><h3>Inspiradata AI</h3><p>Platform inspirasi data, tren isu, generator ide, dan pengembangan materi berbasis AI.</p><button class="private-btn" data-private="Inspiradata AI">Lihat informasi →</button></article>
+      </div>
+    </div>
+  </section>
 
-  <script src="config.js"></script>
-  <script src="app.js"></script>
+  <section class="section books" id="buku">
+    <div class="container books-grid">
+      <div class="books-copy reveal">
+        <span class="eyebrow">BOOKS & PUBLICATIONS</span>
+        <h2>Merawat pengalaman dan pengetahuan melalui buku.</h2>
+        <p>Buku menjadi ruang untuk menyusun pengalaman, data, refleksi, dan gagasan agar dapat terus dibaca serta memberi manfaat melampaui waktu.</p>
+        <a class="btn primary" href="https://s.id/bukutije" target="_blank" rel="noopener">Lihat seluruh buku</a>
+      </div>
+      <div class="book-stack reveal">
+        <div class="book-cover c1"><img src="assets/img/book-anak-bersinar.png" onerror="this.src='assets/img/placeholder.svg'" alt=""></div>
+        <div class="book-cover c2"><img src="assets/img/book-abs-remaja.jpg" onerror="this.src='assets/img/placeholder.svg'" alt=""></div>
+        <div class="book-cover c3"><img src="assets/img/book-hadir-sepenuh-jiwa.png" onerror="this.src='assets/img/placeholder.svg'" alt=""></div>
+        <div class="book-cover c4"><img src="assets/img/book-penyuluh-hebat.png" onerror="this.src='assets/img/placeholder.svg'" alt=""></div>
+        <div class="book-cover c5"><img src="assets/img/book-kekuatan-dalam-diam.png" onerror="this.src='assets/img/placeholder.svg'" alt=""></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="insight">
+    <div class="container">
+      <div class="section-heading reveal"><span class="eyebrow">INSIGHT</span><h2>Gagasan yang layak disimpan lebih lama.</h2><p>Tulisan, refleksi, pengalaman, dan pembelajaran yang tidak berhenti sebagai status media sosial.</p></div>
+      <div class="content-grid" id="insightGrid"><div class="empty">Memuat insight...</div></div>
+      <div class="center" id="insightMoreWrap" hidden><button class="btn secondary" id="insightMore">Lihat insight lainnya</button></div>
+    </div>
+  </section>
+
+  <section class="section soft" id="catatan">
+    <div class="container">
+      <div class="section-heading reveal"><span class="eyebrow">CATATAN</span><h2>Catatan singkat dari hari ke hari.</h2><p>Ruang untuk pemikiran singkat, aktivitas, dan hal-hal kecil yang ingin tetap tersimpan.</p></div>
+      <div class="note-list" id="noteList"><div class="empty">Memuat catatan...</div></div>
+    </div>
+  </section>
+
+  <section class="section dark" id="pengembangan">
+    <div class="container">
+      <div class="section-heading light reveal"><span class="eyebrow">HUMAN DEVELOPMENT</span><h2>Teknologi membantu proses. Manusia tetap menjadi pusat.</h2><p>Program dirancang untuk memperkuat pengetahuan, kesadaran, keterampilan, dan kemampuan bertindak dalam kehidupan nyata.</p></div>
+      <div class="service-grid">
+        <article class="service reveal"><span>01</span><h3>Training & Workshop</h3><p>Pelatihan interaktif untuk organisasi, komunitas, sekolah, dan lingkungan kerja.</p></article>
+        <article class="service reveal"><span>02</span><h3>Learning Series</h3><p>Rangkaian pembelajaran tematik yang sistematis, relevan, dan dapat diterapkan.</p></article>
+        <article class="service reveal"><span>03</span><h3>Counseling</h3><p>Pendampingan yang menghargai martabat, pilihan, dan proses pertumbuhan individu.</p></article>
+        <article class="service reveal"><span>04</span><h3>Community Development</h3><p>Penguatan kapasitas masyarakat melalui partisipasi, kolaborasi, dan inovasi sosial.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-section"><div class="container reveal"><blockquote>“Pengetahuan menjadi lebih bermakna ketika diubah menjadi karya, dan karya menjadi lebih bernilai ketika memberi manfaat bagi sesama.”</blockquote><cite>— Tri Tjahyono</cite></div></section>
+
+  <section class="section" id="profil">
+    <div class="container profile-grid">
+      <div class="profile-image reveal"><img src="assets/img/tije-seminar.png" onerror="this.src='assets/img/placeholder.svg'" alt="Tri Tjahyono"></div>
+      <div class="profile-copy reveal"><span class="eyebrow">ABOUT THE CREATOR</span><h2>Tri Tjahyono</h2><p class="role">Sosiolog • Penulis • Trainer • Konselor • Digital Developer</p><p>Berpengalaman dalam pengembangan manusia, edukasi sosial, pelatihan, konseling, penulisan, serta pengembangan aplikasi digital yang mendukung pembelajaran dan pelayanan.</p><p>Melalui MyTije Digital Hub, karya-karya tersebut dihimpun dalam satu rumah digital yang terus tumbuh dan dapat memberi manfaat lebih luas.</p><div class="hero-actions"><a class="btn primary" href="https://s.id/tritjahyono" target="_blank" rel="noopener">Lihat profil lengkap</a><a class="btn secondary" href="#kontak">Hubungi</a></div></div>
+    </div>
+  </section>
+
+  <section class="section contact-section" id="kontak">
+    <div class="container contact-card reveal">
+      <div><span class="eyebrow">LET'S CONNECT</span><h2>Mari bertukar gagasan dan membangun manfaat.</h2><p>Untuk kolaborasi, pelatihan, karya tulis, atau pengembangan inovasi digital.</p></div>
+      <div class="social-cards">
+        <a id="instagramLink" href="https://instagram.com/tritjahyono_dharmatara" target="_blank" rel="noopener"><img src="assets/icons/instagram.svg" alt=""><span><strong>Instagram</strong><small>@tritjahyono_dharmatara</small></span><b>↗</b></a>
+        <a id="facebookLink" href="#" target="_blank" rel="noopener"><img src="assets/icons/facebook.svg" alt=""><span><strong>Facebook</strong><small>Terhubung di Facebook</small></span><b>↗</b></a>
+        <a id="emailLink" href="#"><img src="assets/icons/email.svg" alt=""><span><strong>Email</strong><small>Hubungi melalui email</small></span><b>↗</b></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="brand footer-brand"><img src="assets/img/mytije-logo.png" alt="" class="brand-logo"><span class="brand-word"><strong>MyTije</strong><small>Digital Hub</small></span></div>
+    <p>Knowledge • Technology • Human Development</p>
+    <p>© <span id="year"></span> MyTije Digital Hub</p>
+  </div>
+</footer>
+
+<dialog id="privateDialog" class="dialog"><button class="dialog-x">×</button><div class="dialog-icon">🔒</div><h3 id="privateTitle">Akses terbatas</h3><p>Aplikasi ini merupakan bagian dari MyTije Digital Hub dan hanya dapat diakses oleh pemilik atau pengguna yang memperoleh izin.</p><button class="btn primary dialog-ok">Mengerti</button></dialog>
+
+<dialog id="contentDialog" class="dialog content-dialog"><button class="dialog-x content-x">×</button><article id="contentBody"></article></dialog>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/content.js"></script>
+<script>if("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(()=>{});</script>
 </body>
 </html>
