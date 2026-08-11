@@ -1,8 +1,8 @@
 window.TIJE_CONFIG = {
   publicApps: {
     bukutije: "https://buku.mytije.com",
-    guekuat: "https://s.id/guekuat",
-    abs: "https://s.id/absremajahub"
+    guekuat: "https://guekuat.mytije.com",
+    abs: "https://absremajahub.mytije.com"
   },
 
   social: {
