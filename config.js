@@ -9,11 +9,11 @@ window.TIJE_CONFIG = {
     instagram: "https://instagram.com/tritjahyono_dharmatara",
 
     // Isi alamat Facebook lengkap, lalu tombol Facebook otomatis tampil.
-    // Contoh: "https://facebook.com/namaakun"
+    // Contoh: "https://facebook.com/tritjahyono"
     facebook: "",
 
     // Isi alamat email, lalu tombol Email otomatis tampil.
-    // Contoh: "nama@email.com"
+    // Contoh: "brotije@gmail.com"
     email: ""
   },
 
