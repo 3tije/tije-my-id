@@ -1,16 +1,77 @@
-document.addEventListener("DOMContentLoaded",()=>{
- const C=window.MYTIJE_CONFIG||{};
- document.getElementById("year").textContent=new Date().getFullYear();
- const menu=document.getElementById("menuToggle"),nav=document.getElementById("primaryNav");
- menu.onclick=()=>{const open=nav.classList.toggle("open");menu.setAttribute("aria-expanded",String(open))};
- nav.querySelectorAll("a").forEach(a=>a.onclick=()=>nav.classList.remove("open"));
- const observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("visible")}),{threshold:.08});
- document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
- const dlg=document.getElementById("privateDialog"),title=document.getElementById("privateTitle");
- document.querySelectorAll("[data-private]").forEach(b=>b.onclick=()=>{title.textContent=b.dataset.private;dlg.showModal()});
- dlg.querySelector(".dialog-x").onclick=()=>dlg.close();dlg.querySelector(".dialog-ok").onclick=()=>dlg.close();
- const ig=document.getElementById("instagramLink"),fb=document.getElementById("facebookLink"),em=document.getElementById("emailLink");
- if(C.INSTAGRAM_URL)ig.href=C.INSTAGRAM_URL;
- if(C.FACEBOOK_URL)fb.href=C.FACEBOOK_URL;else fb.onclick=e=>{e.preventDefault();alert("URL Facebook belum diisi di config.js")};
- if(C.EMAIL){em.href="mailto:"+C.EMAIL;em.querySelector("small").textContent=C.EMAIL}else em.onclick=e=>{e.preventDefault();alert("Email belum diisi di config.js")};
-});
+(() => {
+  const config = window.TIJE_CONFIG || {};
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  document.querySelectorAll("[data-public-app]").forEach(link => {
+    const key = link.dataset.publicApp;
+    if (config.publicApps && config.publicApps[key]) link.href = config.publicApps[key];
+  });
+
+  const social = config.social || {};
+  const instagramLink = document.getElementById("instagramLink");
+  const facebookLink = document.getElementById("facebookLink");
+  const emailLink = document.getElementById("emailLink");
+
+  if (instagramLink && social.instagram) instagramLink.href = social.instagram;
+
+  if (facebookLink && social.facebook) {
+    facebookLink.href = social.facebook;
+    facebookLink.hidden = false;
+  }
+
+  if (emailLink && social.email) {
+    emailLink.href = `mailto:${social.email}`;
+    emailLink.hidden = false;
+  }
+
+
+  const menuBtn = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".primary-nav");
+  menuBtn?.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("open");
+    menuBtn.setAttribute("aria-expanded", String(isOpen));
+  });
+  nav?.querySelectorAll("a").forEach(a => a.addEventListener("click", () => nav.classList.remove("open")));
+
+  const privateDialog = document.getElementById("privateDialog");
+  const ownerDialog = document.getElementById("ownerDialog");
+  const dialogTitle = document.getElementById("dialogTitle");
+
+  document.querySelectorAll(".private-trigger").forEach(button => {
+    button.addEventListener("click", () => {
+      const card = button.closest("[data-private-title]");
+      dialogTitle.textContent = card?.dataset.privateTitle || "Akses terbatas";
+      privateDialog.showModal();
+    });
+  });
+
+  document.getElementById("ownerAccess")?.addEventListener("click", () => {
+    if (config.ownerDashboardUrl) {
+      window.location.href = config.ownerDashboardUrl;
+    } else {
+      ownerDialog.showModal();
+    }
+  });
+
+  document.querySelectorAll("dialog").forEach(dialog => {
+    dialog.querySelectorAll(".dialog-close,.dialog-ok").forEach(btn => btn.addEventListener("click", () => dialog.close()));
+    dialog.addEventListener("click", e => {
+      const box = dialog.getBoundingClientRect();
+      if (e.clientX < box.left || e.clientX > box.right || e.clientY < box.top || e.clientY > box.bottom) dialog.close();
+    });
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => navigator.serviceWorker.register("service-worker.js").catch(() => {}));
+  }
+})();

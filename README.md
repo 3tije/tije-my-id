@@ -1,54 +1,63 @@
-# MyTije Landing Full v2
+# TIJE Digital Hub
 
-Versi ini mempertahankan karakter desain cerah MyTije versi 1 dan menambahkan:
-- Logo MyTije baru lebih besar di header/footer
-- Icon PWA bersih
-- Insight
-- Catatan
-- Instagram, Facebook, Email dengan icon
-- Tidak ada tombol/menu admin di landing page
-- Koneksi ke Apps Script memakai JSONP agar stabil dari GitHub Pages
+Paket landing page statis untuk `tije.my.id`.
 
-## Hubungkan ke Apps Script
-Buka:
-`assets/js/config.js`
+## Isi
+- `index.html` — halaman utama
+- `styles.css` — desain responsif
+- `app.js` — navigasi, modal akses, animasi, dan PWA
+- `config.js` — tautan publik, WhatsApp, dan dashboard pemilik
+- `manifest.webmanifest` + `service-worker.js` — dukungan PWA
+- `assets/tri-tjahyono.webp` — foto hero
 
-Isi URL Apps Script yang sama dengan admin:
+## Cara memasang di GitHub Pages
+1. Buat repository baru, misalnya `tije-my-id`.
+2. Unggah semua isi folder ini ke root repository.
+3. Buka **Settings → Pages**.
+4. Pada **Build and deployment**, pilih **Deploy from a branch**.
+5. Pilih branch `main` dan folder `/root`, lalu simpan.
+6. Tambahkan file `CNAME` berisi `tije.my.id`.
+7. Di pengelola domain, arahkan DNS sesuai petunjuk GitHub Pages.
+
+## Mengubah tautan
+Edit `config.js`.
 
 ```js
-window.MYTIJE_CONFIG = {
-  API_URL: "https://script.google.com/macros/s/XXXXX/exec",
-  SITE_URL: "https://mytije.com",
-  INSTAGRAM_URL: "https://instagram.com/tritjahyono_dharmatara",
-  FACEBOOK_URL: "URL_FACEBOOK_ANDA",
-  EMAIL: "EMAIL_ANDA"
-};
+publicApps: {
+  bukutije: "https://s.id/bukutije",
+  guekuat: "https://s.id/guekuat",
+  abs: "https://s.id/absremajahub"
+}
 ```
 
-## Aset versi 1
-Agar foto/cover asli tetap tampil, salin file berikut dari repo MyTije versi 1 ke:
-`assets/img/`
+WhatsApp telah dinonaktifkan sepenuhnya.
 
-- tije-ruang-kerja.png
-- tije-seminar.png
-- being-logo.png
-- book-anak-bersinar.png
-- book-abs-remaja.jpg
-- book-hadir-sepenuh-jiwa.png
-- book-penyuluh-hebat.png
-- book-kekuatan-dalam-diam.png
+Bagian Connect hanya menggunakan Instagram, Facebook, dan Email. Isi Facebook dan Email pada `config.js`; tombol yang belum diisi otomatis disembunyikan.
 
-Jika belum disalin, halaman tetap berjalan dan menampilkan placeholder.
+## Catatan keamanan
+Landing page ini sengaja tidak menyimpan URL aplikasi privat atau PIN dalam kode publik.
+Tombol **Masuk Pemilik** baru akan aktif setelah `ownerDashboardUrl` diisi dengan halaman autentikasi aman, misalnya Supabase Auth.
+Jangan menyimpan password/PIN di `index.html`, `config.js`, atau JavaScript publik.
 
-## GitHub
-Anda dapat memakai repo MyTije yang sekarang:
-1. Backup repo.
-2. Upload seluruh isi paket ini.
-3. Salin kembali foto dan cover versi 1 ke `assets/img/`.
-4. Ubah `CNAME.example` menjadi `CNAME` jika repo ini yang langsung melayani `mytije.com`.
-5. Isi `config.js`.
-6. Commit.
-7. Hard refresh / tunggu service worker memperbarui cache.
 
-## Admin
-Admin tetap repo terpisah. Landing page ini tidak mempunyai link admin.
+## Pengaturan DNS DepoDomain untuk tije.my.id
+
+Pada jendela DNS Manager:
+
+1. Pilih tipe `A`.
+2. Kolom nama/host diisi `@` — jangan `A@`.
+3. Kolom Content diisi satu alamat IP GitHub Pages.
+4. Simpan, lalu ulangi sampai ada empat record:
+
+- `@` → `185.199.108.153`
+- `@` → `185.199.109.153`
+- `@` → `185.199.110.153`
+- `@` → `185.199.111.153`
+
+Untuk `www`, tambahkan:
+
+- Tipe: `CNAME`
+- Nama/Host: `www`
+- Content: `<username-github>.github.io`
+
+Jangan menambahkan nama repository pada nilai CNAME.
