@@ -6,7 +6,8 @@
   <meta name="theme-color" content="#0f172a" />
   <meta name="description" content="TIJE Digital Hub — Knowledge, Technology, dan Human Development." />
   <title>TIJE Digital Hub</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/mytije-icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/mytije-icon.svg" />
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -87,7 +88,7 @@
   <header class="site-header" id="top">
     <div class="container nav-wrap">
       <a class="brand" href="#top" aria-label="TIJE Digital Hub">
-        <span class="brand-mark">T</span>
+        <span class="brand-mark brand-logo"><img src="assets/mytije-icon.svg" alt="" /></span>
         <span><strong>TIJE</strong><small>Digital Hub</small></span>
       </a>
 
@@ -118,7 +119,7 @@
           <p class="hero-lead">Ruang digital yang menghubungkan buku, aplikasi, pembelajaran, data, dan inovasi untuk mendukung pengembangan manusia.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#ekosistem">Jelajahi Ekosistem</a>
-            <a class="btn btn-secondary" data-public-app="bukutije" href="ttps://buku.mytije.com" target="_blank" rel="noopener">Lihat BukuTije</a>
+            <a class="btn btn-secondary" data-public-app="bukutije" href="https://buku.mytije.com" target="_blank" rel="noopener">Lihat BukuTije</a>
           </div>
           <div class="trust-row">
             <span><b>15+</b> Buku</span>
@@ -312,10 +313,10 @@
           <a class="real-book book-b" href="https://buku.mytije.com" target="_blank" rel="noopener" aria-label="Aku Bukan Sembarang Remaja">
             <img src="assets/book-abs-remaja.jpg" alt="Cover buku Aku Bukan Sembarang Remaja">
           </a>
-          <a class="real-book book-c" href="ttps://buku.mytije.com" target="_blank" rel="noopener" aria-label="Hadir Sepenuh Jiwa">
+          <a class="real-book book-c" href="https://buku.mytije.com" target="_blank" rel="noopener" aria-label="Hadir Sepenuh Jiwa">
             <img src="assets/book-hadir-sepenuh-jiwa.png" alt="Cover buku Hadir Sepenuh Jiwa">
           </a>
-          <a class="real-book book-d" href="ttps://buku.mytije.com" target="_blank" rel="noopener" aria-label="Penyuluh Hebat, Manusia Merdeka">
+          <a class="real-book book-d" href="https://buku.mytije.com" target="_blank" rel="noopener" aria-label="Penyuluh Hebat, Manusia Merdeka">
             <img src="assets/book-penyuluh-hebat.png" alt="Cover buku Penyuluh Hebat, Manusia Merdeka">
           </a>
           <a class="real-book book-e" href="ttps://buku.mytije.com target="_blank" rel="noopener" aria-label="Kekuatan dalam Diam">
@@ -348,18 +349,60 @@
       </div>
     </section>
 
-    <section class="section" id="profil">
-      <div class="container profile-grid">
-        <div class="profile-image reveal"><img src="assets/tije-seminar.png" alt="Tri Tjahyono saat memberikan materi seminar" /></div>
-        <div class="profile-copy reveal">
-          <span class="eyebrow">ABOUT THE CREATOR</span>
-          <h2>Tri Tjahyono</h2>
-          <p class="profile-role">Sosiolog • Penulis • Trainer • Konselor • Digital Developer</p>
-          <p>Berpengalaman dalam pengembangan manusia, edukasi sosial, pelatihan, konseling, penulisan, serta pengembangan berbagai aplikasi digital yang mendukung pembelajaran dan pelayanan.</p>
-          <p>Melalui TIJE Digital Hub, karya-karya tersebut dihimpun dalam satu rumah digital yang terus tumbuh dan dapat memberi manfaat lebih luas.</p>
-          <div class="profile-actions">
-            <a class="btn btn-primary" href="https://s.id/tritjahyono" target="_blank" rel="noopener">Lihat profil lengkap</a>
-            <a class="btn btn-secondary" href="#kontak">Hubungi</a>
+    <section class="section profile-section" id="profil">
+      <div class="container">
+        <div class="profile-hero-grid">
+          <div class="profile-image profile-formal reveal"><img src="assets/tri-formal.jpg" alt="Foto formal Tri Tjahyono" /></div>
+          <div class="profile-copy reveal">
+            <span class="eyebrow">PROFIL PROFESIONAL</span>
+            <h2>Tri Tjahyono, S.Sos., M.Si.</h2>
+            <p class="credential-line">CT • CPCT • CSPs • CCP • CNGT • CNHC</p>
+            <p class="profile-role">Penyuluh Narkoba Ahli Madya • Sosiolog • Trainer</p>
+            <p>Berpengalaman lebih dari dua dekade dalam pengabdian di Badan Narkotika Nasional, pendidikan, penyuluhan, pelatihan, pemberdayaan masyarakat, media edukasi, serta pengembangan kapasitas manusia.</p>
+            <p>Perjalanan profesional dibangun melalui pengalaman lapangan, akademik, kepemimpinan, dan pelayanan publik dengan semangat menghadirkan pengetahuan yang dapat diterapkan dan memberi manfaat.</p>
+            <div class="profile-actions">
+              <a class="btn btn-primary" href="#karir">Perjalanan Karier</a>
+              <a class="btn btn-secondary" href="#giat">Giat Penyuluhan</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="career-wrap" id="karir">
+          <div class="career-heading reveal">
+            <span class="eyebrow">PERJALANAN PROFESIONAL</span>
+            <h3>Karier & Pengabdian</h3>
+            <p>Jejak profesional sejak 2002 hingga saat ini, termasuk jalur akademik yang berjalan berdampingan dengan pengabdian di BNN RI.</p>
+          </div>
+          <div class="career-layout">
+            <div class="career-timeline reveal">
+              <article><time>2002</time><div><h4>PHL BNN RI</h4><p>Awal pengabdian di Badan Narkotika Nasional Republik Indonesia.</p></div></article>
+              <article class="academic"><time>2002–2014</time><div><h4>Dosen Universitas Nasional (UNAS), Jakarta</h4><p>Jalur akademik yang berjalan berdampingan dengan pengabdian di BNN RI.</p></div></article>
+              <article><time>2009</time><div><h4>Kasubbid Evaluasi Sosial</h4><p>Bidang Sosial, Pusat Terapi & Rehabilitasi Lakhar BNN.</p></div></article>
+              <article><time>2010</time><div><h4>Kasi Pemetaan dan Analisis</h4><p>Deputi Bidang Pemberdayaan Masyarakat BNN.</p></div></article>
+              <article><time>2010</time><div><h4>Kasubbag Pengelolaan Logistik</h4><p>Biro Umum, Sekretariat Utama BNN.</p></div></article>
+              <article><time>2016–2017</time><div><h4>Kepala ULP / PPBJ</h4><p>Pengelolaan layanan pengadaan barang/jasa di lingkungan BNN.</p></div></article>
+              <article><time>2017</time><div><h4>Kasubdit Media Elektronik</h4><p>Direktorat Informasi dan Edukasi, Deputi Bidang Pencegahan BNN.</p></div></article>
+              <article><time>2020</time><div><h4>Penyuluh Narkoba Ahli Madya / Koordinator Media Elektronik</h4><p>Penguatan edukasi dan penyebarluasan informasi melalui media elektronik.</p></div></article>
+              <article><time>2023</time><div><h4>Kepala BNN Kabupaten Tuban</h4><p>BNNK Tuban, Jawa Timur.</p></div></article>
+              <article><time>2024</time><div><h4>Kepala Bagian Umum BNNP Kalimantan Barat</h4><p>BNN Provinsi Kalimantan Barat.</p></div></article>
+              <article><time>2026–Sekarang</time><div><h4>Penyuluh Narkoba Ahli Madya</h4><p>Badan Narkotika Nasional Republik Indonesia.</p></div></article>
+            </div>
+            <aside class="career-photo reveal"><img src="assets/tri-seragam.png" alt="Tri Tjahyono mengenakan seragam BNN RI" /><span>Pengabdian • Edukasi • Pencegahan</span></aside>
+          </div>
+        </div>
+
+        <div class="profile-info-grid">
+          <article class="profile-info-card reveal"><span class="eyebrow">PENDIDIKAN</span><h3>Pendidikan & Pengembangan Kepemimpinan</h3><ul><li><b>1995</b> Diploma Informatika Komputer — Santa Lusia, Jakarta</li><li><b>1999</b> Sosiologi — Universitas Gadjah Mada</li><li><b>2002</b> Pascasarjana Sosiologi — Universitas Gadjah Mada</li><li><b>2010</b> Diklat PIM IV BNN</li><li><b>2016</b> Diklat PIM III BNN</li><li><b>2021</b> PKN Tingkat II BNN</li></ul></article>
+          <article class="profile-info-card reveal"><span class="eyebrow">KOMPETENSI</span><h3>Bidang Keahlian</h3><div class="skill-chips"><span>Penyuluhan P4GN</span><span>Training & Fasilitasi</span><span>Public Speaking</span><span>Human Development</span><span>Konseling Adiksi</span><span>NLP</span><span>Teknologi Informasi</span></div><h4 class="cert-title">Sertifikasi Profesional</h4><p>CT • CPCT • CSPs • CCP • CNGT • CNHC</p></article>
+        </div>
+
+        <div class="international reveal"><span class="eyebrow">PENGALAMAN INTERNASIONAL</span><div class="international-grid"><article><b>2009 • Thailand</b><p>Alternative Development — Chiang Mai / Golden Triangle.</p></article><article><b>2012 • Yordania</b><p>Interpol Asian Regional Conference — Narco-Terrorism.</p></article></div></div>
+
+        <div class="outreach" id="giat">
+          <div class="section-heading reveal"><span class="eyebrow">GIAT PENYULUHAN & EDUKASI</span><h2>Jejak edukasi dalam kegiatan nyata.</h2><p>Dokumentasi kegiatan penyuluhan dan edukasi melalui kanal YouTube.</p></div>
+          <div class="video-grid">
+            <article class="video-card reveal"><div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/2mXrtAo8Xts" title="Giat penyuluhan Tri Tjahyono - Video 1" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><h3>Giat Penyuluhan & Edukasi</h3></article>
+            <article class="video-card reveal"><div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/vi8C1vh8E8g" title="Giat penyuluhan Tri Tjahyono - Video 2" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><h3>Dokumentasi Kegiatan</h3></article>
           </div>
         </div>
       </div>
@@ -383,7 +426,7 @@
 
   <footer class="site-footer">
     <div class="container footer-grid">
-      <div class="brand footer-brand"><span class="brand-mark">T</span><span><strong>TIJE</strong><small>Digital Hub</small></span></div>
+      <div class="brand footer-brand"><span class="brand-mark brand-logo"><img src="assets/mytije-icon.svg" alt="" /></span><span><strong>TIJE</strong><small>Digital Hub</small></span></div>
       <p>Knowledge • Technology • Human Development</p>
       <p>© <span id="year"></span> TIJE Digital Hub</p>
     </div>

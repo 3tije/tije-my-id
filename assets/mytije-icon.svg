@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="MyTIJE">
+  <rect width="128" height="128" rx="28" fill="#ffffff"/>
+  <path d="M18 65c15 0 28 5 40 15V49c-11-8-24-12-40-12v28Z" fill="#123b61"/>
+  <path d="M110 65c-15 0-28 5-40 15V49c11-8 24-12 40-12v28Z" fill="#123b61"/>
+  <path d="M18 72c17 1 31 7 46 20 15-13 29-19 46-20v10c-17 2-31 8-46 23-15-15-29-21-46-23V72Z" fill="#15966f"/>
+  <path d="M35 22h58v13H71v42H57V35H35V22Z" fill="#15966f"/>
+</svg>
