@@ -11,10 +11,10 @@ window.TIJE_CONFIG = {
 
     // Isi alamat Facebook lengkap, lalu tombol Facebook otomatis tampil.
     // Contoh: "https://facebook.com/tritjahyono"
-    facebook: "",
+    facebook: "https://web.facebook.com/tri.tjahyono.3?locale=id_ID",
 
     // Isi alamat email, lalu tombol Email otomatis tampil.
     // Contoh: "brotije@gmail.com"
-    email: ""
+    email: "brotije@gmail.com"
   },
 };
