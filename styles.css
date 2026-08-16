@@ -47,7 +47,7 @@ img{max-width:100%;display:block}a{text-decoration:none;color:inherit}button{fon
 
 /* === TIJE TOP QUICK MENU + BLOG === */
 .quick-menu{position:relative;z-index:5;padding:22px 0 8px;background:linear-gradient(180deg,#fff 0%,#f8fafc 100%);}
-.quick-menu-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;}
+.quick-menu-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px;}
 .quick-menu-card{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:122px;padding:16px 10px;text-align:center;text-decoration:none;color:inherit;background:#fff;border:1px solid rgba(15,23,42,.08);border-radius:20px;box-shadow:0 10px 28px rgba(15,23,42,.07);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;}
 .quick-menu-card:hover{transform:translateY(-5px);box-shadow:0 16px 34px rgba(15,23,42,.12);border-color:rgba(15,23,42,.16);}
 .quick-icon{font-size:2.35rem;line-height:1;margin-bottom:10px;}
@@ -61,10 +61,7 @@ img{max-width:100%;display:block}a{text-decoration:none;color:inherit}button{fon
 .blog-feature-copy p{max-width:760px;color:#cbd5e1;margin-bottom:20px;}
 .blog-feature-copy .btn span{margin-left:6px;}
 @media (max-width:900px){.quick-menu-grid{grid-template-columns:repeat(3,minmax(0,1fr));}.quick-menu-card{min-height:112px;}}
-.quick-menu-human{display:none;}
 
 @media (max-width:560px){.quick-menu-human{display:flex;}.quick-menu{padding:16px 0 8px;}.quick-menu-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}.quick-menu-card{min-height:148px;border-radius:18px;padding:16px 10px;}.quick-icon{font-size:2.55rem;margin-bottom:10px;}.quick-menu-card strong{font-size:1rem;line-height:1.25;}.quick-menu-card small{font-size:.76rem;line-height:1.35;}.blog-feature-card{grid-template-columns:1fr;padding:24px;border-radius:22px;text-align:center;}.blog-feature-icon{margin:auto;width:86px;height:86px;font-size:2.8rem;}}
 
 
-/* Desktop: 6 menu cards */
-.quick-menu-grid{grid-template-columns:repeat(6,minmax(0,1fr));}
