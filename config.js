@@ -1,5 +1,6 @@
 window.TIJE_CONFIG = {
   publicApps: {
+    blog: "https://blog.mytije.com",
     bukutije: "https://buku.mytije.com",
     guekuat: "https://guekuat.mytije.com",
     abs: "https://absremajahub.mytije.com"
@@ -16,6 +17,4 @@ window.TIJE_CONFIG = {
     // Contoh: "brotije@gmail.com"
     email: ""
   },
-
-  ownerDashboardUrl: ""
 };

@@ -34,7 +34,6 @@
   nav?.querySelectorAll("a").forEach(a => a.addEventListener("click", () => nav.classList.remove("open")));
 
   const privateDialog = document.getElementById("privateDialog");
-  const ownerDialog = document.getElementById("ownerDialog");
   const dialogTitle = document.getElementById("dialogTitle");
 
   document.querySelectorAll(".private-trigger").forEach(button => {
@@ -43,14 +42,6 @@
       dialogTitle.textContent = card?.dataset.privateTitle || "Akses terbatas";
       privateDialog.showModal();
     });
-  });
-
-  document.getElementById("ownerAccess")?.addEventListener("click", () => {
-    if (config.ownerDashboardUrl) {
-      window.location.href = config.ownerDashboardUrl;
-    } else {
-      ownerDialog.showModal();
-    }
   });
 
   document.querySelectorAll("dialog").forEach(dialog => {
